@@ -1,0 +1,25 @@
+.page-heading {
+    text-align: center;
+    font-size: 48pt;
+}
+
+.entry-datetime {
+    font-style: italic;
+    font-size: 12pt;
+}   
+
+.entry-text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.default-font {
+    font-family: sans-serif;
+    font-size: 12pt;
+    line-height: 18pt;
+}
+
+.tag {
+    font-size:10pt;
+    font-style: italic;
+}
