@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Hotel Hell Guest Survey</title>
+    <title>Thank you for staying at the Hotel Hell!</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Thank you for staying at the Hotel Hell!</h1>
-    <p>Please complete the following survey regarding your stay with us. Your feedback helps us continue to make our guest experience as infernal as possible.</p>
+    <h1 id="title">Hotel Hell Guest Survey</h1>
+    <p id="description">Please complete the following survey regarding your stay with us. Your feedback helps us continue to make our guest experience as infernal as possible.</p>
+    <form id="survey_form" method="post" action='www.whatthehell.com'>
     <fieldset>
-        <label for="guest-name">Guest Name<input id="guest-name" name="guest-name" type="text" required /></label>
-        <label for="email">Email Address<input id="email" name="email" type="email" required /></label>
-        <label for="nights-stayed"># of Nights: <input id="nights-stayed" type="number" name="nights-stayed" min="1" max="30" /></label>
-        <label for="pain-level">Pain level (1-10)<input id="pain-level" type="number" name="pain-level" min="1" max="10" /></label>
-        <label for="misery">What made your stay especially miserable?
-            <select id="misery" name="misery">
+        <label for="guest-name" id="name-label">Guest Name<input id="guest-name" name="guest-name" type="text" placeholder="First and last name" required/></label>
+        <label for="email" id="email-label">Email Address<input id="email" name="email" type="email" placeholder="Enter your email address" required /></label>
+        <label for="number" id="number-label"># of Nights Stayed<input id="number" type="number" min="1" max="30" placeholder="# Nights Stayed"/></label>
+        <label for="pain-level">Pain level<input id="pain-level" type="number" min="1" max="10" placeholder="Enter a number from 1 to 10"/></label>
+        <label for="dropdown">What made your stay especially miserable?
+            <select id="dropdown" name="misery">
               <option value="">(select one)</option>
               <option value="1">Bed of nails</option>
               <option value="2">Hot poker in toilet</option>
@@ -25,12 +26,25 @@
         </label>
     </fieldset>
     <fieldset>
-
-          </fieldset>
-
-
+        <legend>Did you have any positive experiences? Please check all that apply:</legend>
+            <label for="edible-food"><input id="edible-food" type="checkbox" name="positive" class="inline" value="1"/> Edible food</label>
+            <label for="trees"><input id="trees" type="checkbox" name="positive" class="inline" value="2"/> View of trees outside</label>
+            <label for="shower"><input id="shower" type="checkbox" name="positive" class="inline" value="3"/> Shower temperature within human comfort level</label>
+            <label for="fire"><input id="fire" type="checkbox" name="positive" class="inline" value="4"/> Eternal fire ran out of napalm</label>
+            <label for="feedback">If you selected any of the above, please provide additional feedback below so we can prevent such occurrences in the future:
+                <textarea id="feedback" name="feedback" rows="5" cols="30" placeholder="Your Comments"></textarea>
+           </label>     
     </fieldset>
+    <fieldset>
+        <legend>Would you recommend Hotel Hell to a friend or fellow damned soul?</legend>
+        <label for="yes"><input id="yes" type="radio" name="recommend" class="inline"/> Yes</label>
+        <label for="no"><input id="no" type="radio" name="recommend" class="inline" /> No</label>
+        <label for="maybe"><input id="maybe" type="radio" name="recommend" class="inline" /> Maybe</label>
+      </fieldset>
+  
 
+    <input type="submit" value="SUBMIT, OR ELSE!" />
+    </form>
 </body>
 
 
