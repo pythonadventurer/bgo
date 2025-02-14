@@ -1,11 +1,39 @@
-.page-heading {
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.default-font {
+    font-family: sans-serif;
+    color: rgb(117, 117, 117);
+    font-size: 14pt;
+    line-height: 1.3em;
+}
+
+.blog-title {
     text-align: center;
     font-size: 48pt;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: blue;
+}
+
+.entry {
+    width: 60vw;
+    max-width: 800px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+.entry-title {
+    color: black;
+
 }
 
 .entry-datetime {
-    font-style: italic;
-    font-size: 12pt;
+    font-weight: bold;
 }   
 
 .entry-text {
@@ -13,13 +41,13 @@
     padding-bottom: 10px;
 }
 
-.default-font {
-    font-family: sans-serif;
-    font-size: 12pt;
-    line-height: 18pt;
+.tags {
+    font-size:12pt;
+    font-style: italic;
 }
 
-.tag {
-    font-size:10pt;
+.email-text {
+    font-size:12pt;
     font-style: italic;
+    color: blue;
 }
