@@ -7,12 +7,12 @@
 </head>
 <body>
     <h1 id="title">Hotel Hell Guest Survey</h1>
-    <p id="description">Please complete the following survey regarding your stay with us. Your feedback helps us continue to make our guest experience as infernal as possible.</p>
+    <p id="description">Please complete the following survey regarding your stay with us.<br> Your feedback helps us continue to make our guest experience as infernal as possible.</p>
     <form id="survey_form" method="post" action='www.whatthehell.com'>
     <fieldset>
         <label for="guest-name" id="name-label">Guest Name<input id="guest-name" name="guest-name" type="text" placeholder="First and last name" required/></label>
         <label for="email" id="email-label">Email Address<input id="email" name="email" type="email" placeholder="Enter your email address" required /></label>
-        <label for="number" id="number-label"># of Nights Stayed<input id="number" type="number" min="1" max="30" placeholder="# Nights Stayed"/></label>
+        <label for="number" id="number-label"># of Nights Stayed<input id="number" type="number" min="1" max="30" placeholder="Enter a number from 1 to 30"/></label>
         <label for="pain-level">Pain level<input id="pain-level" type="number" min="1" max="10" placeholder="Enter a number from 1 to 10"/></label>
         <label for="dropdown">What made your stay especially miserable?
             <select id="dropdown" name="misery">
@@ -31,10 +31,10 @@
             <label for="trees"><input id="trees" type="checkbox" name="positive" class="inline" value="2"/> View of trees outside</label>
             <label for="shower"><input id="shower" type="checkbox" name="positive" class="inline" value="3"/> Shower temperature within human comfort level</label>
             <label for="fire"><input id="fire" type="checkbox" name="positive" class="inline" value="4"/> Eternal fire ran out of napalm</label>
-            <label for="feedback">If you selected any of the above, please provide additional feedback below so we can prevent such occurrences in the future:
+            <label for="feedback">Please provide additional feedback below so we can prevent such occurrences in the future:
                 <textarea id="feedback" name="feedback" rows="5" cols="30" placeholder="Your Comments"></textarea>
            </label>     
-    </fieldset>
+    </fieldset>       
     <fieldset>
         <legend>Would you recommend Hotel Hell to a friend or fellow damned soul?</legend>
         <label for="yes"><input id="yes" type="radio" name="recommend" class="inline"/> Yes</label>
