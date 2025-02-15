@@ -6,6 +6,7 @@ body {
     color: #f5f6f7;
     font-family: Tahoma;
     font-size: 18px;
+    /* background-image: "flames-of-hell.jpg"; */
   }
 
   h1, p {
@@ -19,19 +20,17 @@ body {
     max-width: 500px;
     min-width: 300px;
     margin: 0 auto;
-    /* padding-bottom: 2em; */
+
+    
   }
   
   fieldset {
     border: none;
-    padding: 2rem 0;
-    /* border-bottom: 3px solid #3b3b4f; */
+    margin: 10px;
+    padding: 0px;
   }
   
-  /* fieldset:last-of-type {
-    border-bottom: none;
-  } */
-  
+
   label {
     display: block;
     margin: 1.1rem 0;
@@ -63,12 +62,12 @@ body {
   
   input[type="submit"] {
     display: block;
-    width: 50%;
+    width: 40%;
     margin: 1em auto;
     height: 2em;
     font-size: 1.1rem;
     background-color: #3b3b4f;
     border-color: white;
-    min-width: 300px;
+    min-width: 200px;
   }
   
