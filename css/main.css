@@ -1,8 +1,14 @@
 body {
     font-family: sans-serif;
     color: blue;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 p, li {
     color: black;
+}
+
+h2, h3 {
+    margin-top: 2.0em;
 }
