@@ -6,7 +6,7 @@ body {
     color: #f5f6f7;
     font-family: Tahoma;
     font-size: 18px;
-    /* background-image: "flames-of-hell.jpg"; */
+    /* background-image: url('../img/flames-of-hell.jpg') */
   }
 
   h1, p {
@@ -20,7 +20,6 @@ body {
     max-width: 500px;
     min-width: 300px;
     margin: 0 auto;
-
     
   }
   
