@@ -232,6 +232,11 @@ The CSS property overflow: hidden; is used to hide any content that overflows th
 text-transform: uppercase;
 ```
 
+# Misc
 
+The letter-spacing property can be used to adjust the space between each character of text in an element.
+
+
+Now we can add the horizontal spacing using flex. In your p selector, add a display property set to flex and a justify-content property set to space-between.
 
 
