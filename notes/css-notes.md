@@ -36,16 +36,21 @@ Flexbox has a main and cross axis. The main axis is defined by the `flex-directi
 Note: The axes and directions will be different depending on the text direction. The values shown are for a left-to-right text direction.
 
 ### `flex-wrap` 
-Determines how your flex items behave when the flex container is too small. Setting it to `wrap` will allow the items to wrap to the next row or column. `nowrap` (default) will prevent your items from wrapping and shrink them if needed.
+Determines how flex items behave when the flex container is too small.  
+
+`wrap` will allow the items to wrap to the next row or column. 
+`nowrap` (default) will prevent items from wrapping and shrink them if needed.
 
 ### `justify-content`
 Determines how the items inside a flex container are positioned along the main axis, affecting their position and the space around them.
 
 ### `align-items`
-Positions the flex content along the cross axis. In this case, with your flex-direction set to row, your cross axis would be vertical.
+Positions the flex content along the cross axis. Example: if `flex-direction` is set to `row`, the cross axis is vertical.
 
 ### `object-fit`
-Set `object-fit: cover` to tell the image to fill the `img` container while maintaining aspect ratio, resulting in cropping to fit.
+
+`object-fit: cover` 
+Fills the `img` container while maintaining aspect ratio, resulting in cropping to fit.
 
 ### `gap` 
 Sets the gaps, also known as gutters, between rows and columns. The `gap` property and its `row-gap` and `column-gap` sub-properties provide this functionality for flex, grid, and multi-column layout. You apply the property to the container element.
@@ -54,6 +59,31 @@ The `::after` pseudo-element creates an element that is the last child of the se
 
 
 ## Properties
+
+### `align-items`
+
+### `background-color`
+
+### `background-image`
+
+### `background`
+
+### `blur`
+The blur() CSS function applies a Gaussian blur to the input image. Its result is a <filter-function>. 
+
+Example:
+
+```css
+filter: blur(2px);
+```
+
+### `border`
+
+### `border-bottom`
+
+### `border-color`
+
+### `border-left`
 
 ### `border-radius`
 Rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
@@ -75,6 +105,8 @@ The `box-sizing` property can be used to adjust this behavior:
 `box-sizing: border-box` is the default styling that browsers use for the <table>, <select>, and <button> elements, and for <input> elements whose type is radio, checkbox, reset, button, submit, color, or search.
 
 Note: It is often useful to set `box-sizing` to `border-box` to lay out elements. This makes dealing with the sizes of elements much easier, and generally eliminates a number of pitfalls you can stumble on while laying out your content. On the other hand, when using `position: relative` or `position: absolute`, use of `box-sizing: content-box` allows the positioning values to be relative to the content, and independent of changes to border and padding sizes, which is sometimes desirable.
+
+### `color`
 
 ### `display`
 
@@ -113,17 +145,26 @@ Tip: The `em` and `rem` units are practical in creating perfectly scalable layou
 
 ### `filter`
 
-`blur`
-The blur() CSS function applies a Gaussian blur to the input image. Its result is a <filter-function>. 
+### `flex-direction`
 
-Example:
+### `flex-wrap`
 
-```css
-filter: blur(2px);
-```
+### `font-family`
+
+### `font-size`
+
+### `font-style`
+
+### `gap`
+
+### `height`
+
+### `justify-content`
 
 ### `letter-spacing`
 Used to adjust the space between each character of text in an element.
+
+### `linear-gradient`
 
 ### `margin`
 Used to create space around elements, outside of any defined borders. With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
@@ -145,9 +186,30 @@ All the margin properties can have the following values:
 
 Tip: Negative values are allowed.
 
+### `max-width`
+
+### `min-width`
+
+### `object-fit`
+
 ### `overflow`
+
 `overflow: hidden` is used to hide any content that overflows the bounds of an element, meaning that any content that exceeds the element's dimensions will not be visible. This is useful for preventing unwanted scrollbars and maintaining a clean layout.
+
+### `overflow`
+
+### `padding-bottom`
+
+### `padding`
+
+### `rotate`
+
+### `text-align`
 
 ### `text-transform`
 
+### `transform `
 
+### `vertical-align`
+
+### `width`
