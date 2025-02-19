@@ -24,4 +24,37 @@ title: HTML Notes
 </html>
 ```
 
+# HTML Elements
+
+## `<article>`
+Article elements commonly contain multiple elements that have related information.
+
+
+# HTML Attributes
+
+## `id`
+Targeted in css with `#`.  Example:
+
+```html
+<div id="cat"></div>
+```
+
+```css
+#cat {
+
+}
+```
+
+## `class`
+Targeted in css with `.` Example:
+
+```html
+<div class="cat"></div>
+```
+
+```css
+.cat {
+
+}
+```
 

@@ -20,6 +20,10 @@ In the CSS box model, every HTML element is treated as a box with four areas:
 - Border : encloses the padding and content.
 - Margin : the area outside the box, used to control the space between elements.
 
+## Comments in CSS
+Example:
+`/* comment here */`
+
 ## Flexbox
 Flexbox is a one-dimensional CSS layout that can control the way items are spaced out and aligned within a container.
 
@@ -117,7 +121,9 @@ Displays an element as an inline element (like ``<span>``). Any height and width
 Displays an element as a block element (like ``<p>``). It starts on a new line, and takes up the whole width.
 
 `inline-block` 
-Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values
+Displays an element as an inline-level block container. The element itself is formatted as an inline element, but height and width can e specified. If height and weight are omitted, `inline-block` elements only take up the width of their content.
+
+If multiple `inline-block` items are on different lines, need to get them onn the same line to avoid extra whitespace between the objects.
 
 #### Absolute Lengths
 The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
@@ -195,8 +201,8 @@ All the margin properties can have the following values:
 Negative values are allowed.
 Setting `margin-left` and `margin-right` to `auto` centers the element within its parent element.
 
-
 ### `max-width`
+Set `max-width` to prevent the element from being too wide on wider screen.
 
 ### `min-width`
 
@@ -221,3 +227,22 @@ See [[#Flexbox]]
 ### `vertical-align`
 
 ### `width`
+
+Example:
+Adjust the width so that `flavor` is 75% of the total width and `price` is 25%.
+
+```html
+<p class="flavor">Mocha</p><p class="price">4.50</p>
+```
+
+```css
+.flavor {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+    text-align: right;
+    width: 25%
+}
+```
