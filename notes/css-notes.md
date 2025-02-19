@@ -192,7 +192,9 @@ All the margin properties can have the following values:
 `%`       : specifies a margin in % of the width of the containing element
 `inherit` : specifies that the margin should be inherited from the parent element
 
-Tip: Negative values are allowed.
+Negative values are allowed.
+Setting `margin-left` and `margin-right` to `auto` centers the element within its parent element.
+
 
 ### `max-width`
 
