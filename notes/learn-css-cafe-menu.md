@@ -82,7 +82,7 @@ Inside the opening div tag, add the id attribute with a value of menu.
 ## Step 21
 The goal now is to make the div not take up the entire width of the page. The CSS width property is perfect for this.
 
-You can use the id selector to target a specific element with an id attribute. An id selector is defined by placing the hash symbol # directly in front of the element's id value. For example, if an element has the id of cat then you would target that element like this:
+You can use the id selector to target a specific element with an id attribute. An id selector is defined by placing the hash symbol # directly in front of the element's id value.
 
 ## Step 22
 Comments in CSS look like this:

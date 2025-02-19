@@ -163,6 +163,11 @@ See [[#Flexbox]]
 See [[#Flexbox]]
 
 ### `font-family`
+Examples:
+`sans-serif`
+`serif`
+`Impact`
+
 
 ### `font-size`
 
@@ -212,9 +217,14 @@ See [[#Flexbox]]
 
 `overflow: hidden` is used to hide any content that overflows the bounds of an element, meaning that any content that exceeds the element's dimensions will not be visible. This is useful for preventing unwanted scrollbars and maintaining a clean layout.
 
-### `padding-bottom`
-
 ### `padding`
+Space between the content and sides of an element. Specify as one value for all four sides, or individually:
+
+`padding-top`
+`padding-right`
+`padding-bottom`
+`padding-left`
+
 
 ### `rotate`
 
