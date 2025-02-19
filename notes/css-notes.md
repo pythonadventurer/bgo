@@ -69,7 +69,7 @@ The `::after` pseudo-element creates an element that is the last child of the se
 ### `background`
 
 ### `blur`
-The blur() CSS function applies a Gaussian blur to the input image. Its result is a <filter-function>. 
+The blur() CSS function applies a Gaussian blur to the input image. Its result is a `filter-function` 
 
 Example:
 
@@ -102,7 +102,7 @@ The `box-sizing` property can be used to adjust this behavior:
 
 `border-box` tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.
 
-`box-sizing: border-box` is the default styling that browsers use for the <table>, <select>, and <button> elements, and for <input> elements whose type is radio, checkbox, reset, button, submit, color, or search.
+`box-sizing: border-box` is the default styling that browsers use for the `<table>`, `<select>`, and `<button>` elements, and for `<input>` elements whose type is radio, checkbox, reset, button, submit, color, or search.
 
 Note: It is often useful to set `box-sizing` to `border-box` to lay out elements. This makes dealing with the sizes of elements much easier, and generally eliminates a number of pitfalls you can stumble on while laying out your content. On the other hand, when using `position: relative` or `position: absolute`, use of `box-sizing: content-box` allows the positioning values to be relative to the content, and independent of changes to border and padding sizes, which is sometimes desirable.
 
@@ -110,9 +110,14 @@ Note: It is often useful to set `box-sizing` to `border-box` to lay out elements
 
 ### `display`
 
-`inline`       Displays an element as an inline element (like ``<span>``). Any height and width properties will have no effect. This is default.
-`block`        Displays an element as a block element (like ``<p>``). It starts on a new line, and takes up the whole width.
-`inline-block` Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values
+`inline`       
+Displays an element as an inline element (like ``<span>``). Any height and width properties will have no effect. This is default.
+
+`block`
+Displays an element as a block element (like ``<p>``). It starts on a new line, and takes up the whole width.
+
+`inline-block` 
+Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values
 
 #### Absolute Lengths
 The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
@@ -146,8 +151,10 @@ Tip: The `em` and `rem` units are practical in creating perfectly scalable layou
 ### `filter`
 
 ### `flex-direction`
+See [[#Flexbox]]
 
 ### `flex-wrap`
+See [[#Flexbox]]
 
 ### `font-family`
 
@@ -156,10 +163,11 @@ Tip: The `em` and `rem` units are practical in creating perfectly scalable layou
 ### `font-style`
 
 ### `gap`
-
+See [[#Flexbox]]
 ### `height`
 
 ### `justify-content`
+See [[#Flexbox]]
 
 ### `letter-spacing`
 Used to adjust the space between each character of text in an element.
@@ -191,12 +199,10 @@ Tip: Negative values are allowed.
 ### `min-width`
 
 ### `object-fit`
-
+See [[#Flexbox]]
 ### `overflow`
 
 `overflow: hidden` is used to hide any content that overflows the bounds of an element, meaning that any content that exceeds the element's dimensions will not be visible. This is useful for preventing unwanted scrollbars and maintaining a clean layout.
-
-### `overflow`
 
 ### `padding-bottom`
 
