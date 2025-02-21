@@ -153,6 +153,10 @@ Example of a complete form:
 </form> 
 ```
 
+## `<footer>`
+The `footer` element is used to define a footer for a document or section. A footer typically contains information about the author of the document, copyright data, links to terms of use, contact information, and more.
+
+
 ## `<img>`
 All `img` elements should have an `alt` attribute. The `alt` attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load.
 Example:
