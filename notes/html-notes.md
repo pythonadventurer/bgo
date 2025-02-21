@@ -81,6 +81,10 @@ Example:
 <button type="submit">Submit</button>
 ```
 
+## `<div>`
+Default `display` property for `<div>` is `block`.
+
+
 ## `<fieldset>`
 The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line.
 

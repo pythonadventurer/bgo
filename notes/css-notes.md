@@ -95,6 +95,36 @@ Rounds the corners of an element's outer border edge. You can set a single radiu
 ### `box-shadow`
 Adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radius, and color.
 
+Syntax:
+
+```css
+box-shadow: offsetX offsetY color;
+```
+
+Here's how the offsetX and offsetY values work:
+
+- both offsetX and offsetY accept number values in px and other CSS units
+- a positive offsetX value moves the shadow right and a negative value moves it left
+- a positive offsetY value moves the shadow down and a negative value moves it up
+- if you want a value of zero (0) for any or both offsetX and offsetY, you don't need to add a unit. Every browser understands that zero means no change.
+
+The height and width of the shadow is determined by the height and width of the element it's applied to. You can also use an optional spreadRadius value to spread out the reach of the shadow.
+
+#### Blur Radius
+
+```css
+box-shadow: offsetX offsetY blurRadius color;
+```
+
+If a `blurRadius` value isn't included, it defaults to `0` and produces sharp edges. The higher the value of `blurRadius`, the greater the blurring effect is.
+
+#### Spread Radius
+```css
+box-shadow: offsetX offsetY blurRadius spreadRadius color;
+```
+
+
+
 ### `box-sizing`
 Sets how the total width and height of an element is calculated.
 
@@ -111,6 +141,51 @@ The `box-sizing` property can be used to adjust this behavior:
 Note: It is often useful to set `box-sizing` to `border-box` to lay out elements. This makes dealing with the sizes of elements much easier, and generally eliminates a number of pitfalls you can stumble on while laying out your content. On the other hand, when using `position: relative` or `position: absolute`, use of `box-sizing: content-box` allows the positioning values to be relative to the content, and independent of changes to border and padding sizes, which is sometimes desirable.
 
 ### `color`
+There are two main color models: the additive RGB (red, green, blue) model used in electronic devices, and the subtractive CMYK (cyan, magenta, yellow, black) model used in print.
+
+#### Primary colors
+- red
+- green
+- blue
+
+#### Secondary colors
+Combinations of primary colors
+- yellow
+- cyan
+
+#### Tertiary colors
+Combination of a primary with a nearby secondary color
+- orange
+
+#### Dominant vs accent color
+Notice that the red and cyan colors are very bright right next to each other. This contrast can be distracting if it's overused on a website, and can make text hard to read if it's placed on a complementary-colored background.
+
+It's better practice to choose one color as the dominant color, and use its complementary color as an accent to bring attention to certain content on the page.
+
+#### Hex Colors
+Hex color values start with a # character and take six characters from 0-9 and A-F. The first pair of characters represent red, the second pair represent green, and the third pair represent blue. For example, ``#4B5320``.
+
+With hex colors, `00` is 0% of that color, and `FF` is 100%. So `#00FF00` translates to 0% red, 100% green, and 0% blue, and is the same as `rgb(0, 255, 0)`.
+
+#### HSL Color Model
+The HSL color model, or hue, saturation, and lightness, is another way to represent colors.
+
+The CSS hsl function accepts 3 values: a number from 0 to 360 for hue, a percentage from 0 to 100 for saturation, and a percentage from 0 to 100 for lightness.
+
+If you imagine a color wheel, the hue red is at 0 degrees, green is at 120 degrees, and blue is at 240 degrees.
+
+Saturation is the intensity of a color from 0%, or gray, to 100% for pure color. You must add the percent sign % to the saturation and lightness values.
+
+Lightness is how bright a color appears, from 0%, or complete black, to 100%, complete white, with 50% being neutral.
+
+#### Alpha Channel
+An alpha channel value sets opacity. 0% = transparent, 100% = opaque.
+Use the `rgba` function to use an alpha channel with a color.
+
+Example:
+```css
+rgba(redValue, greenValue, blueValue, alphaValue);
+```
 
 ### `display`
 
@@ -118,7 +193,8 @@ Note: It is often useful to set `box-sizing` to `border-box` to lay out elements
 Displays an element as an inline element (like ``<span>``). Any height and width properties will have no effect. This is default.
 
 `block`
-Displays an element as a block element (like ``<p>``). It starts on a new line, and takes up the whole width.
+Displays an element as a block element (like ``<p>``). It starts on a new line, and takes up the whole width. In this way, elements stack on top of one another like actual blocks.
+
 
 `inline-block` 
 Displays an element as an inline-level block container. The element itself is formatted as an inline element, but height and width can e specified. If height and weight are omitted, `inline-block` elements only take up the width of their content.
@@ -184,6 +260,45 @@ See [[#Flexbox]]
 Used to adjust the space between each character of text in an element.
 
 ### `linear-gradient`
+A gradient is when one color transitions into another. The CSS `linear-gradient` function lets you control the direction of the transition along a line, and which colors are used.
+
+One thing to remember is that the `linear-gradient` function actually creates an `image` element, and is usually paired with the `background` property which can accept an image as a value.
+
+Syntax:
+```css
+linear-gradient(gradientDirection, color1, color2, ...);
+```
+
+`gradientDirection` is the direction of the line used for the transition. `color1` and `color2` are `color` arguments, which are the colors that will be used in the transition itself. These can be any type of color, including color keywords, hex, rgb, or hsl.
+
+Examples:
+
+```css
+/* two colors */
+.red {
+  background: linear-gradient(90deg, rgb(255, 0, 0), rgb(0,255,0));
+}
+
+/* three colors */
+.red {
+  background: linear-gradient(90deg, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0,0,255));
+}
+```
+
+Color-stops allow you to fine-tune where colors are placed along the gradient line. They are a length unit like `px` or percentages that follow a color in the `linear-gradient` function.
+
+For example, in this red-black gradient, the transition from red to black takes place at the 90% point along the gradient line, so red takes up most of the available space:
+
+Example Code
+
+```css
+linear-gradient(90deg, red 90%, black);
+```
+
+Without the color-stops, the linear-gradient function automatically calculates these values and places colors evenly along the gradient line by default.
+
+
+
 
 ### `margin`
 Used to create space around elements, outside of any defined borders. With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
@@ -205,6 +320,8 @@ All the margin properties can have the following values:
 
 Negative values are allowed.
 Setting `margin-left` and `margin-right` to `auto` centers the element within its parent element.
+
+When the shorthand `margin` property has two values, it sets `margin-top` and `margin-bottom` to the first value, and `margin-left` and `margin-right` to the second value.
 
 ### `max-width`
 Set `max-width` to prevent the element from being too wide on wider screen.
