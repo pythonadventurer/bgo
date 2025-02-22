@@ -123,8 +123,6 @@ If a `blurRadius` value isn't included, it defaults to `0` and produces sharp ed
 box-shadow: offsetX offsetY blurRadius spreadRadius color;
 ```
 
-
-
 ### `box-sizing`
 Sets how the total width and height of an element is calculated.
 
