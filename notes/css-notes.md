@@ -66,6 +66,14 @@ The `::after` pseudo-element creates an element that is the last child of the se
 
 ### `align-items`
 
+### `aspect-ratio`
+
+Example:
+
+```css
+  aspect-ratio: 35/4;
+```
+
 ### `background-color`
 
 ### `background-image`
@@ -371,3 +379,13 @@ Adjust the width so that `flavor` is 75% of the total width and `price` is 25%.
     width: 25%
 }
 ```
+
+Example of setting maximum width on an image:
+
+```css
+img {
+  width: max(250px, 25vw);
+}
+```
+In the above example, the width of the image will be 250px if the viewport width is less than 1000 pixels. If the viewport width is greater than 1000 pixels, the width of the image will be 25vw. This is because 25vw is equal to 25% of the viewport width.
+
