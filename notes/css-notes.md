@@ -48,6 +48,17 @@ Determines how flex items behave when the flex container is too small.
 ### `justify-content`
 Determines how the items inside a flex container are positioned along the main axis, affecting their position and the space around them.
 
+#### Positional Alignment
+`center`
+`left`
+`right`
+
+#### Distributed Alignment
+`space-evenly`
+
+
+
+
 ### `align-items`
 Positions the flex content along the cross axis. Example: if `flex-direction` is set to `row`, the cross axis is vertical.
 

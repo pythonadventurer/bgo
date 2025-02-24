@@ -257,6 +257,19 @@ The legend element acts as a caption for the content in the `<fieldset>` element
 ## `<main>`
 The main element is used to represent the main content of the body of an HTML document. Content inside the main element should be unique to the document and should not be repeated in other parts of the document.
 
+## `<nav>`
+Example:
+
+```html
+    <nav>
+    <ul>
+        <li><a>INFO</a></li>
+        <li><a>HTML</a></li>
+        <li><a>CSS</a></li>
+    </ul>
+    </nav>
+```
+
 ## `<ol>`
 Ordered (numbered) list example:
 
@@ -292,11 +305,13 @@ Unordered list example:
 
 # HTML Attributes
 
+## `aria-labelledby`
+Every region role requires a label, which helps screen reader users understand the purpose of the region. One method for adding a label is to add a heading element inside the region and then reference it with the `aria-labelledby` attribute.
+
 ## `id`
 The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page.
 
 The purpose of the ID attribute is to identify a single element when linking (using a fragment identifier), scripting, or styling (with CSS).
-
 
 Targeted in css with `#`.  Example:
 
@@ -308,6 +323,14 @@ Targeted in css with `#`.  Example:
 #cat {
 
 }
+```
+Example of linking using `id`:
+```html
+<ul>
+    <li><a href="#student-info">INFO</a></li>
+    <li><a href="#html-questions">HTML</a></li>
+    <li><a href="#css-questions">CSS</a></li>
+</ul>
 ```
 
 ## `class`
