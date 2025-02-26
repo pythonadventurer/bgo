@@ -76,14 +76,43 @@ The `::after` pseudo-element creates an element that is the last child of the se
 ## Properties
 
 ### `align-items`
+The CSS align-items property sets the align-self value on all direct children as a group. In flexbox, it controls the alignment of items on the cross axis. In grid layout, it controls the alignment of items on the block axis within their grid areas. Examples:
+
+`stretch`
+`center`
+`start`
+`end`
+
+See also:
+https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+
+
 
 ### `aspect-ratio`
+Width-to-height raio of an element's box.
 
-Example:
+Examples:
 
 ```css
   aspect-ratio: 35/4;
+  aspect-ratio: 1 / 1;
+  aspect-ratio: 1;
+
+  /* fallback to 'auto' for replaced elements */
+  aspect-ratio: auto 3/4;
+  aspect-ratio: 9/6 auto;
+
+  /* Global values */
+  aspect-ratio: inherit;
+  aspect-ratio: initial;
+  aspect-ratio: revert;
+  aspect-ratio: revert-layer;
+  aspect-ratio: unset;
 ```
+
+See also:
+https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio
+
 
 ### `background-color`
 

@@ -74,7 +74,7 @@ Article elements commonly contain multiple elements that have related informatio
 ## `<button>`
 Both input and button elements are ``inline elements``, which don't appear on new lines.
 
-For `submit` bttons, Add the type attribute with the value `submit` to the button to make it clear that it is a submit button.
+For `submit` bttons, add the type attribute with the value `submit` to the button to make it clear that it is a submit button.
 
 Example:
 ```html
