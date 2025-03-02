@@ -24,6 +24,20 @@ In the CSS box model, every HTML element is treated as a box with four areas:
 Example:
 `/* comment here */`
 
+## Screen Reader Only Pattern to hide text
+Create a CSS class, such as `sr-only`, to hide the selected element so only screen readers can see it.
+
+
+```css
+position: absolute;
+width: 1px;
+height: 1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+clip-path: inset(50%);
+white-space: nowrap;
+```
+
 ## Flexbox
 Flexbox is a one-dimensional CSS layout that can control the way items are spaced out and aligned within a container.
 
@@ -55,8 +69,6 @@ Determines how the items inside a flex container are positioned along the main a
 
 #### Distributed Alignment
 `space-evenly`
-
-
 
 
 ### `align-items`
