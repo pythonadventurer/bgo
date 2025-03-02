@@ -42,7 +42,18 @@ HTML5 has some elements that identify different content areas. These elements ma
 Nested elements should be placed two spaces further to the right of the element they are nested in. This spacing is called indentation and it is used to make HTML easier to read.
 
 ## `<a>`
-Anchor element. Link to another page. Place text between the open and closing tags of the `<a>` element. Example:
+The link tag (anchor tag) can be in 4 different states called pseudo-classes:
+
+    `a:link`: the regular state of the link when it is not active, visited, or hovered on
+    `a:visited`: when the link has been clicked by the user, that is, visited
+    `a:hover`: when the user is hovering on the link
+    `a:active`: when the user is clicking on the link
+
+The states (pseudo-classes) must appear in the order listed above due to the cascading nature of CSS.
+
+To remove the default underline of the link, you can target all the pseudo-classes and assign them a text-decoration property of none.
+
+Place text between the open and closing tags of the `<a>` element. Example:
 
 ```html
 <a href="https://www.freecodecamp.org">click here to go to freeCodeCamp</a>
@@ -66,6 +77,18 @@ Turn content into a link by wrapping it in an anchor element. Example:
 <a href="https://freecatphotoapp.com">
   <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
 </a>
+```
+## `<address>`
+The <address> HTML element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.
+
+```html
+<p>Contact the author of this page:</p>
+
+<address>
+  <a href="mailto:jim@example.com">jim@example.com</a><br />
+  <a href="tel:+14155550132">+1 (415) 555‑0132</a>
+</address>
+
 ```
 
 ## `<article>`
@@ -312,6 +335,13 @@ Example:
 </select>
 ```
 
+## `<textarea>`
+The <textarea> HTML element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.
+
+```html
+<textarea id="feedback" name="feedback" rows="5" cols="30" placeholder="Your Comments"></textarea>
+
+```
 
 ## `<ul>`
 Unordered list example:

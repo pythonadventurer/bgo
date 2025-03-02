@@ -62,17 +62,28 @@ Determines how flex items behave when the flex container is too small.
 ### `justify-content`
 Determines how the items inside a flex container are positioned along the main axis, affecting their position and the space around them.
 
-#### Positional Alignment
+`start`
 `center`
+`space-between`
+`space-evenly`
 `left`
 `right`
 
-#### Distributed Alignment
-`space-evenly`
+see:
+https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
 
 
 ### `align-items`
 Positions the flex content along the cross axis. Example: if `flex-direction` is set to `row`, the cross axis is vertical.
+
+`stretch`
+`center`
+`start`
+`end`
+
+See:
+https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+
 
 ### `object-fit`
 
@@ -245,6 +256,22 @@ Example:
 rgba(redValue, greenValue, blueValue, alphaValue);
 ```
 
+### `cursor`
+Sets the mouse cursor, if any, to show when the mouse pointer is over an element.
+
+The cursor setting should inform users of the mouse operations that can be performed at the current location, including: text selection, activating help or context menus, copying content, resizing tables, and so on. You can specify either the type of cursor using a keyword, or load a specific icon to use (with optional fallback images and mandatory keyword as a final fallback).
+
+```css
+/* Common cursor values */
+cursor: pointer;
+cursor: zoom-out;
+cursor: help;
+cursor: not-allowed;
+cursor: wait;
+cursor: grab;
+
+```
+
 ### `display`
 
 `inline`       
@@ -356,7 +383,13 @@ linear-gradient(90deg, red 90%, black);
 Without the color-stops, the linear-gradient function automatically calculates these values and places colors evenly along the gradient line by default.
 
 
+### `list-style`
+The list-style-type CSS property sets the marker (such as a disc, character, or custom counter style) of a list item element.
 
+```css
+list-style: circle;
+
+```
 
 ### `margin`
 Used to create space around elements, outside of any defined borders. With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
@@ -407,6 +440,19 @@ Space between the content and sides of an element. Specify as one value for all 
 
 ### `text-transform`
 
+### `top`
+The `top` CSS property sets the vertical position of a positioned element. This inset property has no effect on non-positioned elements.
+
+```css
+top: 0;
+top: 4em;
+top: 10%;
+top: 20px;
+```
+
+See:
+https://developer.mozilla.org/en-US/docs/Web/CSS/top
+
 ### `transform `
 
 ### `vertical-align`
@@ -441,3 +487,18 @@ img {
 ```
 In the above example, the width of the image will be 250px if the viewport width is less than 1000 pixels. If the viewport width is greater than 1000 pixels, the width of the image will be 25vw. This is because 25vw is equal to 25% of the viewport width.
 
+## At Rules
+At-rules are CSS statements that instruct CSS how to behave. They begin with an at-sign, @ (U+0040 COMMERCIAL AT), followed by an identifier. They include everything from the at-keyword up to the next semicolon, ; (U+003B SEMICOLON), or the next CSS block, whichever comes first.
+
+At-rules are used to group and structure style rules and other at-rules, declare style information not directly associated with selected content, and manage syntactic constructs such as imports and namespaces keyword mappings.
+
+See:
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule
+
+
+### `@media`
+The @media CSS at-rule can be used to apply part of a style sheet based on the result of one or more media queries. With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
+
+```css
+
+```

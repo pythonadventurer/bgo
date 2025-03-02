@@ -9,6 +9,10 @@ date: 2025-03-01
 ## Sources
 https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
 
+## Accessibility Inspector (Firefox Developer Tools)
+https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#check-for-accessibility-issues
+
+
 ## ARIA Overview
 Accessible Rich Internet Applications (ARIA) is a set of roles and attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
 
@@ -32,3 +36,8 @@ The region landmark role's content should make sense if separated from the main 
 
 Using the <section> element will automatically communicate a section has a role of region if it is given an accessible name. Developers should always prefer using the correct semantic HTML element, in this case <section>, over using ARIA.
 
+## Color Contrast
+The contrast between the text and the background of a heading should be at least 4.5:1.
+
+### Contract Checker
+https://webaim.org/resources/contrastchecker/
