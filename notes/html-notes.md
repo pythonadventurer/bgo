@@ -42,7 +42,18 @@ HTML5 has some elements that identify different content areas. These elements ma
 Nested elements should be placed two spaces further to the right of the element they are nested in. This spacing is called indentation and it is used to make HTML easier to read.
 
 ## `<a>`
-Anchor element. Link to another page. Place text between the open and closing tags of the `<a>` element. Example:
+The link tag (anchor tag) can be in 4 different states called pseudo-classes:
+
+    `a:link`: the regular state of the link when it is not active, visited, or hovered on
+    `a:visited`: when the link has been clicked by the user, that is, visited
+    `a:hover`: when the user is hovering on the link
+    `a:active`: when the user is clicking on the link
+
+The states (pseudo-classes) must appear in the order listed above due to the cascading nature of CSS.
+
+To remove the default underline of the link, you can target all the pseudo-classes and assign them a text-decoration property of none.
+
+Place text between the open and closing tags of the `<a>` element. Example:
 
 ```html
 <a href="https://www.freecodecamp.org">click here to go to freeCodeCamp</a>
@@ -67,6 +78,18 @@ Turn content into a link by wrapping it in an anchor element. Example:
   <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
 </a>
 ```
+## `<address>`
+The <address> HTML element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.
+
+```html
+<p>Contact the author of this page:</p>
+
+<address>
+  <a href="mailto:jim@example.com">jim@example.com</a><br />
+  <a href="tel:+14155550132">+1 (415) 555‑0132</a>
+</address>
+
+```
 
 ## `<article>`
 Article elements commonly contain multiple elements that have related information.
@@ -74,7 +97,7 @@ Article elements commonly contain multiple elements that have related informatio
 ## `<button>`
 Both input and button elements are ``inline elements``, which don't appear on new lines.
 
-For `submit` bttons, Add the type attribute with the value `submit` to the button to make it clear that it is a submit button.
+For `submit` bttons, add the type attribute with the value `submit` to the button to make it clear that it is a submit button.
 
 Example:
 ```html
@@ -257,6 +280,19 @@ The legend element acts as a caption for the content in the `<fieldset>` element
 ## `<main>`
 The main element is used to represent the main content of the body of an HTML document. Content inside the main element should be unique to the document and should not be repeated in other parts of the document.
 
+## `<nav>`
+Example:
+
+```html
+    <nav>
+    <ul>
+        <li><a>INFO</a></li>
+        <li><a>HTML</a></li>
+        <li><a>CSS</a></li>
+    </ul>
+    </nav>
+```
+
 ## `<ol>`
 Ordered (numbered) list example:
 
@@ -280,6 +316,33 @@ Example:
 </section>
 ```
 
+## `<select>`
+The <select> HTML element represents a control that provides a menu of options.
+
+Example:
+
+```html
+<label for="pet-select">Choose a pet:</label>
+
+<select name="pets" id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+```
+
+## `<textarea>`
+The <textarea> HTML element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.
+
+```html
+<textarea id="feedback" name="feedback" rows="5" cols="30" placeholder="Your Comments"></textarea>
+
+```
+
 ## `<ul>`
 Unordered list example:
 
@@ -292,11 +355,13 @@ Unordered list example:
 
 # HTML Attributes
 
+## `aria-labelledby`
+Every region role requires a label, which helps screen reader users understand the purpose of the region. One method for adding a label is to add a heading element inside the region and then reference it with the `aria-labelledby` attribute.
+
 ## `id`
 The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page.
 
 The purpose of the ID attribute is to identify a single element when linking (using a fragment identifier), scripting, or styling (with CSS).
-
 
 Targeted in css with `#`.  Example:
 
@@ -308,6 +373,14 @@ Targeted in css with `#`.  Example:
 #cat {
 
 }
+```
+Example of linking using `id`:
+```html
+<ul>
+    <li><a href="#student-info">INFO</a></li>
+    <li><a href="#html-questions">HTML</a></li>
+    <li><a href="#css-questions">CSS</a></li>
+</ul>
 ```
 
 ## `class`

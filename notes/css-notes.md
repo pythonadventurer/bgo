@@ -24,6 +24,20 @@ In the CSS box model, every HTML element is treated as a box with four areas:
 Example:
 `/* comment here */`
 
+## Screen Reader Only Pattern to hide text
+Create a CSS class, such as `sr-only`, to hide the selected element so only screen readers can see it.
+
+
+```css
+position: absolute;
+width: 1px;
+height: 1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+clip-path: inset(50%);
+white-space: nowrap;
+```
+
 ## Flexbox
 Flexbox is a one-dimensional CSS layout that can control the way items are spaced out and aligned within a container.
 
@@ -48,8 +62,28 @@ Determines how flex items behave when the flex container is too small.
 ### `justify-content`
 Determines how the items inside a flex container are positioned along the main axis, affecting their position and the space around them.
 
+`start`
+`center`
+`space-between`
+`space-evenly`
+`left`
+`right`
+
+see:
+https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+
+
 ### `align-items`
 Positions the flex content along the cross axis. Example: if `flex-direction` is set to `row`, the cross axis is vertical.
+
+`stretch`
+`center`
+`start`
+`end`
+
+See:
+https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+
 
 ### `object-fit`
 
@@ -65,6 +99,43 @@ The `::after` pseudo-element creates an element that is the last child of the se
 ## Properties
 
 ### `align-items`
+The CSS align-items property sets the align-self value on all direct children as a group. In flexbox, it controls the alignment of items on the cross axis. In grid layout, it controls the alignment of items on the block axis within their grid areas. Examples:
+
+`stretch`
+`center`
+`start`
+`end`
+
+See also:
+https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+
+
+
+### `aspect-ratio`
+Width-to-height raio of an element's box.
+
+Examples:
+
+```css
+  aspect-ratio: 35/4;
+  aspect-ratio: 1 / 1;
+  aspect-ratio: 1;
+
+  /* fallback to 'auto' for replaced elements */
+  aspect-ratio: auto 3/4;
+  aspect-ratio: 9/6 auto;
+
+  /* Global values */
+  aspect-ratio: inherit;
+  aspect-ratio: initial;
+  aspect-ratio: revert;
+  aspect-ratio: revert-layer;
+  aspect-ratio: unset;
+```
+
+See also:
+https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio
+
 
 ### `background-color`
 
@@ -122,8 +193,6 @@ If a `blurRadius` value isn't included, it defaults to `0` and produces sharp ed
 ```css
 box-shadow: offsetX offsetY blurRadius spreadRadius color;
 ```
-
-
 
 ### `box-sizing`
 Sets how the total width and height of an element is calculated.
@@ -185,6 +254,22 @@ Use the `rgba` function to use an alpha channel with a color.
 Example:
 ```css
 rgba(redValue, greenValue, blueValue, alphaValue);
+```
+
+### `cursor`
+Sets the mouse cursor, if any, to show when the mouse pointer is over an element.
+
+The cursor setting should inform users of the mouse operations that can be performed at the current location, including: text selection, activating help or context menus, copying content, resizing tables, and so on. You can specify either the type of cursor using a keyword, or load a specific icon to use (with optional fallback images and mandatory keyword as a final fallback).
+
+```css
+/* Common cursor values */
+cursor: pointer;
+cursor: zoom-out;
+cursor: help;
+cursor: not-allowed;
+cursor: wait;
+cursor: grab;
+
 ```
 
 ### `display`
@@ -297,6 +382,15 @@ linear-gradient(90deg, red 90%, black);
 
 Without the color-stops, the linear-gradient function automatically calculates these values and places colors evenly along the gradient line by default.
 
+
+### `list-style`
+The list-style-type CSS property sets the marker (such as a disc, character, or custom counter style) of a list item element.
+
+```css
+list-style: circle;
+
+```
+
 ### `margin`
 Used to create space around elements, outside of any defined borders. With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
 
@@ -358,6 +452,19 @@ Example:
 
 ### `text-transform`
 
+### `top`
+The `top` CSS property sets the vertical position of a positioned element. This inset property has no effect on non-positioned elements.
+
+```css
+top: 0;
+top: 4em;
+top: 10%;
+top: 20px;
+```
+
+See:
+https://developer.mozilla.org/en-US/docs/Web/CSS/top
+
 ### `transform `
 
 ### `vertical-align`
@@ -381,4 +488,29 @@ Adjust the width so that `flavor` is 75% of the total width and `price` is 25%.
     text-align: right;
     width: 25%
 }
+```
+
+Example of setting maximum width on an image:
+
+```css
+img {
+  width: max(250px, 25vw);
+}
+```
+In the above example, the width of the image will be 250px if the viewport width is less than 1000 pixels. If the viewport width is greater than 1000 pixels, the width of the image will be 25vw. This is because 25vw is equal to 25% of the viewport width.
+
+## At Rules
+At-rules are CSS statements that instruct CSS how to behave. They begin with an at-sign, @ (U+0040 COMMERCIAL AT), followed by an identifier. They include everything from the at-keyword up to the next semicolon, ; (U+003B SEMICOLON), or the next CSS block, whichever comes first.
+
+At-rules are used to group and structure style rules and other at-rules, declare style information not directly associated with selected content, and manage syntactic constructs such as imports and namespaces keyword mappings.
+
+See:
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule
+
+
+### `@media`
+The @media CSS at-rule can be used to apply part of a style sheet based on the result of one or more media queries. With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
+
+```css
+
 ```
