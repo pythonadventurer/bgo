@@ -297,9 +297,6 @@ linear-gradient(90deg, red 90%, black);
 
 Without the color-stops, the linear-gradient function automatically calculates these values and places colors evenly along the gradient line by default.
 
-
-
-
 ### `margin`
 Used to create space around elements, outside of any defined borders. With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).
 
@@ -346,6 +343,18 @@ Space between the content and sides of an element. Specify as one value for all 
 ### `rotate`
 
 ### `text-align`
+
+### `text-indent`
+
+Example:
+```css
+.note {
+  font-size: 0.6rem;
+  margin: 5px 0;
+  padding: 0 8px;
+  text-indent: -8px;
+}
+```
 
 ### `text-transform`
 
