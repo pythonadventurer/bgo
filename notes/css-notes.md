@@ -439,6 +439,18 @@ Space between the content and sides of an element. Specify as one value for all 
 
 ### `text-align`
 
+### `text-indent`
+
+Example:
+```css
+.note {
+  font-size: 0.6rem;
+  margin: 5px 0;
+  padding: 0 8px;
+  text-indent: -8px;
+}
+```
+
 ### `text-transform`
 
 ### `top`
