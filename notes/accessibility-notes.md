@@ -39,5 +39,5 @@ Using the <section> element will automatically communicate a section has a role 
 ## Color Contrast
 The contrast between the text and the background of a heading should be at least 4.5:1.
 
-### Contract Checker
+### Contrast Checker
 https://webaim.org/resources/contrastchecker/
